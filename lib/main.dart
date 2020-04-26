@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:quiz_app/quiz.dart';
 import 'package:quiz_app/result.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -46,25 +42,19 @@ class _MyAppState extends State<MyApp> {
     },
   ];
   var _questionIndex = 0;
-  var _totalScore=0;
-void _resetQuiz(){
-  setState(() {
-    _questionIndex=0;
-    _totalScore=0;
-  });
-}
+  var _totalScore = 0;
+  void _resetQuiz() {
+    setState(() {
+      _questionIndex = 0;
+      _totalScore = 0;
+    });
+  }
+
   void _answerQuestion(int score) {
-    // if (_questionIndex < _questions.length) {
-    //   print('We have more questions!');
-    // } else {
-    //   print('No more questions');
-    // }
     setState(() {
       _questionIndex += 1;
-      _totalScore+=score;
+      _totalScore += score;
     });
-    print('Answer Choosen');
-    print(_questionIndex);
   }
 
   @override
@@ -79,7 +69,7 @@ void _resetQuiz(){
                 answerQuestion: _answerQuestion,
                 questions: _questions,
                 questionIndex: _questionIndex)
-            : Result(_totalScore,_resetQuiz),
+            : Result(_totalScore, _resetQuiz),
       ),
     );
   }
