@@ -2,7 +2,7 @@
 
 Flutter Basics - Quiz App
 
-#Stater Cleaned App
+# Stater Cleaned App
 https://gist.github.com/doozie-akshay/a1bf400170a90ab4f70d7eaf0d177bc9
 
 ## Reference
